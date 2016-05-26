@@ -1,6 +1,8 @@
 describe('pos', function () {
     var allItems, inputs, dateDigitToString;
-
+    var dateDigitToString = function (num) {
+             return num < 10 ? '0' + num : num;
+         };
     beforeEach(function () {
         allItems = loadAllItems();
         inputs = [
@@ -13,10 +15,7 @@ describe('pos', function () {
             'ITEM000005',
             'ITEM000005',
             'ITEM000005'
-        ];
-        dateDigitToString = function (num) {
-            return num < 10 ? '0' + num : num;
-        };
+        ]
     });
 
     it('should print correct text', function () {
